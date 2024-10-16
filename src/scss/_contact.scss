@@ -1,0 +1,21 @@
+.icons{
+
+    background-color:rgba(235, 219, 219, 0.811);
+    border-color:rgba(235, 219, 219, 0.811) ;
+    
+
+    &:hover{
+        background-color: #0185c3;
+    }
+
+}
+
+
+.contact__two-box{
+    box-shadow: var(--box-shadow-1);
+    padding: 90px 70px;
+    margin: 0;
+    background: var(--bg-white);
+    position: relative;
+    z-index: 2;
+}

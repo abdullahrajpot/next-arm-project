@@ -1,0 +1,136 @@
+// Navbar.scss
+
+.navbar {
+    // Default link color
+    .nav-link {
+        color: #000; // Change this to your default color
+        transition: color 0.3s ease;
+
+        &.active, &:hover {
+            color: #0185c3; // Change the color when active or hovered
+        }
+    }
+
+    .dropdown-toggle {
+        color: #000; // Default color for dropdown headings
+
+        &.active, &.active-dropdown {
+            color: #0185c3; // Change the color when any dropdown item is clicked
+        }
+    }
+    
+    .dropdown-menu {
+        .dropdown-item {
+            &:hover {
+                background-color: rgba(0, 255, 0, 0.1); // Optional: Change background on hover
+            }
+
+            &.active-link {
+                color: #0185c3; // Change this to your desired color for active links
+            }
+        }
+    }
+
+    // Ensures the dropdown is shown
+    .dropdown-menu.show {
+        display: block;
+    }
+}
+
+
+/* Navbar Hover Dropdown CSS */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.nav-item .dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling for active dropdown */
+.nav-item.dropdown:hover .nav-link {
+    color: #0185c3;
+}
+
+/* Active link styling */
+.nav-link.active,
+.nav-link:hover {
+    color: #0185c3 !important;
+}
+
+/* Responsive behavior */
+@media (max-width: 992px) {
+    .nav-item .dropdown-menu {
+        position: static; /* Ensure dropdown works well on smaller screens */
+    }
+}
+
+/* Dropdown Styling */
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow effect */
+    padding: 0;
+    z-index: 1000;
+    border-radius: 0; /* Square corners */
+    width: 240px; /* Increased width of dropdown */
+    transition: all 0.3s ease; /* Smooth transition for dropdown visibility */
+}
+
+.nav-item .dropdown-menu .dropdown-item {
+    padding: 12px 25px;  /* Increased padding for a larger clickable area */
+    color: black;
+    text-align: left;
+    font-weight: normal;
+    font-size: 16px; /* Increased font size */
+    white-space: nowrap;
+    border-left: 3px solid transparent; /* Initially transparent */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;  /* Light grey background hover effect */
+    border-left: 4px solid #0185c3; /* Slightly thicker red left border on hover */
+    color: #0185c3; /* Red text color on hover */
+    padding-left: 30px; /* Small indent effect on hover */
+    transition: all 0.3s ease; /* Smooth transition for padding and color */
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition for smooth dropdown opening */
+    opacity: 1;
+    transform: translateY(0); /* Make dropdown slide down */
+}
+
+/* Active link and hover effect on main nav links */
+.nav-item.dropdown:hover .nav-link {
+    color: #0185c3; /* Red color for active dropdown */
+}
+
+/* Active state for dropdown links */
+.nav-item .dropdown-menu .dropdown-item.active-link {
+    border-left: 4px solid #0185c3; /* Thicker red left border for active item */
+    color: #0185c3;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 992px) {
+    .nav-item .dropdown-menu {
+        position: static;  /* Ensure dropdown works well on mobile */
+        box-shadow: none;  /* Remove shadow on mobile */
+        width: 100%; /* Make dropdown take full width on smaller screens */
+    }
+}
