@@ -126,9 +126,10 @@
 .card{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-// .card-body{
-//     height: 190px;
-// }
+.card-body-indus{
+    padding-top: 5px;
+    height: 190px;
+}
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -234,3 +235,8 @@
     }
   }
   
+
+  .problems{
+    background-color:#a6c6e4 ;
+    color: white;
+  }

@@ -54,6 +54,14 @@ export default function Footer() {
                                 <div className="footer__two-widget-location">
                                     <div className="footer__two-widget-location-item d-flex mt-3" style={{ gap: '15px' }}>
                                         <div className="footer__two-widget-location-item-icon">
+                                            <i className="fa fa-diamond " style={{ color: '#0185c3' }}></i>
+                                        </div>
+                                        <div className="footer__two-widget-location-item-info ">
+                                            <p> NextARM Technologies Pvt.Ltd.</p>
+                                        </div>
+                                    </div>
+                                    <div className="footer__two-widget-location-item d-flex mt-1" style={{ gap: '15px' }}>
+                                        <div className="footer__two-widget-location-item-icon">
                                             <i className="fa fa-phone " style={{ color: '#0185c3' }}></i>
                                         </div>
                                         <div className="footer__two-widget-location-item-info ">

@@ -3,7 +3,6 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { Typography } from 'antd';
 import bannerImg from '../../../assets/images/page-banner.jpg';
 import { useMediaQuery } from 'react-responsive';
-import Retail from './Retail';
 import Telecommunications from './Telecommunications';
 import Health from './Health';
 import Insure from './Insure';
@@ -24,8 +23,7 @@ export default function Industries() {
     const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
 
     const services = [
-        { name: 'Retail & Consumer', path: '/industries' },
-        { name: 'Telecommunications', path: '/industries/telecom' },
+        { name: 'Telecommunications', path: '/industries' },
         { name: 'Health Care', path: '/industries/health' },
         { name: 'Insurance', path: '/industries/insurance' },
         { name: 'Banking & Financial', path: '/industries/banking' },
@@ -151,8 +149,7 @@ export default function Industries() {
             {/* Main Content Section */}
             <div style={{ marginLeft: isSmallScreen ? '0' : '350px', padding: '20px' }}>
                 <Routes>
-                    <Route index element={<Retail />} />
-                    <Route path="/telecom" element={<Telecommunications />} />
+                    <Route index element={<Telecommunications />} />
                     <Route path="/health" element={<Health />} />
                     <Route path="/insurance" element={<Insure />} />
                     <Route path="/banking" element={<Banking />} />

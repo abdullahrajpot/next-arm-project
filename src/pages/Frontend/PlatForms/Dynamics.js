@@ -1,5 +1,5 @@
 import React from 'react';
-import img from "../../../assets/images/devops.jpg";
+import img from "../../../assets/images/dynamics.png";
 import { Typography } from 'antd';
 
 const { Title } = Typography;

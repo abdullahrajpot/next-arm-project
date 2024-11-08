@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import img1 from '../../assets/images/name.png';
+import img1 from '../../assets/images/navbar.jpg';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
@@ -13,7 +13,8 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary py-0 sticky-top">
             <div className="container-fluid">
                 <a className="navbar-brand">
-                    <img src={img1} alt="logo" style={{ width: "200px" }} />
+                    <img src={img1} alt="logo" style={{ width: "250px", height:'80px'
+                     }} />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -39,7 +40,6 @@ export default function Navbar() {
                                 <li><Link className="dropdown-item" to='/services/cyberSecurity' onClick={() => handleLinkClick('services')}>Cyber Security</Link></li>
                                 <li><Link className="dropdown-item" to='/services/cloudMigration' onClick={() => handleLinkClick('services')}>Cloud Migration</Link></li>
                                 <li><Link className="dropdown-item" to='/services/softwareDevelopment' onClick={() => handleLinkClick('services')}>Software Development</Link></li>
-                                <li><Link className="dropdown-item" to='' onClick={() => handleLinkClick('services')}>Application Services</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown fs-6">
@@ -51,8 +51,7 @@ export default function Navbar() {
                                 INDUSTRIES
                             </Link>
                             <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" to='/industries' onClick={() => handleLinkClick('industries')}>Retail & Consumer</Link></li>
-                                <li><Link className="dropdown-item" to='/industries/telecom' onClick={() => handleLinkClick('industries')}>Telecommunications</Link></li>
+                                <li><Link className="dropdown-item" to='/industries' onClick={() => handleLinkClick('industries')}>Telecommunications</Link></li>
                                 <li><Link className="dropdown-item" to='/industries/health' onClick={() => handleLinkClick('industries')}>Health Care</Link></li>
                                 <li><Link className="dropdown-item" to='/industries/insurance' onClick={() => handleLinkClick('industries')}>Insurance</Link></li>
                                 <li><Link className="dropdown-item" to='/industries/banking' onClick={() => handleLinkClick('industries')}>Banking & Financial</Link></li>

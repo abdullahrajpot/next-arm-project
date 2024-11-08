@@ -7,6 +7,7 @@ import CloudMigration from './CloudMigration';
 import SoftwareDevelopment from './SoftwareDevelopment';
 import bannerImg from '../../../assets/images/page-banner.jpg';
 import { useMediaQuery } from 'react-responsive';
+import Footer from '../../../components/Footer'; // Add this line to import Footer
 
 const { Title } = Typography;
 
@@ -16,7 +17,6 @@ export default function Services() {
   const stickyCardRef = useRef(null);
   const footerRef = useRef(null);
 
-  // Use media query to detect smaller screens
   const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
 
   const services = [
@@ -32,11 +32,7 @@ export default function Services() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
-      }
+      setIsScrolling(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -50,7 +46,6 @@ export default function Services() {
     const stickyCard = stickyCardRef.current;
     const footer = footerRef.current;
 
-    // Add null check to avoid TypeError
     if (stickyCard && footer) {
       const observer = new IntersectionObserver(
         ([entry]) => {
@@ -71,7 +66,7 @@ export default function Services() {
         observer.unobserve(footer);
       };
     }
-  }, [isSmallScreen]); // Add isSmallScreen to dependency array
+  }, [isSmallScreen]);
 
   return (
     <div>
@@ -114,7 +109,7 @@ export default function Services() {
             zIndex: 1000,
             border: '1px solid #e0e0e0',
             marginBottom: '0',
-            transition: 'top 0.3s ease', // Smooth transition for larger screens
+            transition: 'top 0.3s ease',
           }}
         >
           <h4 style={{ marginBottom: '20px', fontWeight: 'bold' }}>OUR SERVICES</h4>

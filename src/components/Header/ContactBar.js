@@ -15,14 +15,12 @@ export default function ContactBar() {
                         <div className="top__bar-left">
                             <a style={{ textDecoration: 'none', color: 'white' }}>
                                 <i className="fas fa-phone mx-2" />
-                                {/* <AiFillPhone style={{ color: '#0185c3', marginRight: '2px' }} /> */}
                                 07993725394
                             </a>
                             &nbsp;&nbsp;&nbsp;&nbsp;<span style={{ color: "#ffffff" }}>|</span>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <span style={{ textDecoration: 'none', color: 'white' }}>
                                 <i className="fas fa-envelope mx-2" />
-                                {/* <AiFillMail style={{ color: '#0185c3', marginRight: '2px' }} /> */}
                                 Naveed.syed@nextarm.net
                             </span>
                         </div>

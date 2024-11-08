@@ -1,6 +1,6 @@
 import React from 'react';
 import img from "../../../assets/images/CaaS.jpg";
-import { Typography } from 'antd';
+import { Image, Typography } from 'antd';
 
 const { Title } = Typography;
 
@@ -34,6 +34,8 @@ export default function CloudServices() {
         Guaranteed uptime and performance<br />
         Scalable solutions to grow with your business
       </p>
+
+      {/* <Image src={cloud_vedio}></Image> */}
     </div>
   );
 }
