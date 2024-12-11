@@ -1,0 +1,88 @@
+.about-container {
+    display: flex;
+    flex-direction: column; /* Default to column for small screens */
+    align-items: center; /* Center align items in column */
+    padding: 0 20px; /* Add some horizontal padding */
+  }
+  
+  .about-content {
+    max-width: 600px; /* Limit max width for content */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20px; /* Add some space below the content */
+  }
+  
+  .about-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 500px; /* Limit the max width for larger screens */
+    margin-top: 20px; /* Add some spacing at the top */
+  }
+  
+  @media (min-width: 768px) {
+    .about-container {
+      flex-direction: row; /* Switch to row layout for larger screens */
+      justify-content: space-between; /* Space out the items */
+      align-items: flex-start; /* Align items at the start */
+    }
+  
+    .about-content {
+      margin-right: 20px; /* Add some spacing between text and image */
+      flex: 1; /* Allow content to take up available space */
+    }
+  
+    .about-image {
+      order: 1; /* Position the image on the right */
+    }
+  }
+
+  .about-button {
+    margin-top: 5px;
+    margin-bottom: 35px;
+
+    background: #0185c3;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+
+    &:hover {
+        color: white !important;
+        background: black !important;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 300%;
+        height: 100%;
+        background-color: #0185c3;
+        z-index: -1;
+        transition: all 0.5s ease;
+        transform: translateX(-50%);
+    }
+
+    &:hover::before {
+        width: 0;
+    }
+
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+  .about-button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #1890ff;  /* Change button color on hover */
+      color: white;
+    }
+  }
